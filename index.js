@@ -27,3 +27,20 @@ document.addEventListener('DOMContentLoaded', function() {
 // it's running your function with then , waiting for everything to finish before checking the results
 // fetchBooks() needs to RETURN the promise so that the test can chain then on to it
 // basically, the code you wrote works (as you could see in the browser), its just that for the test to be able to wait for the function to be done in order to test what it did, it needed you to return the function so it could chain another then on to it
+
+
+
+// function fetchBooks() {
+//   return fetch("https://anapioficeandfire.com/api/books")
+//   // .then(resp => resp.json())
+//     .then(function(response) {
+//       return response.json();
+//     })
+//   // .then(json => console.log(json));
+//     .then(function(json) {
+//       console.log('json is', json);
+//       renderBooks(json);
+//     })
+// }
+
+// Thus in the second then() we receive a JSON String that, when we pass it to console.log() prints a JavaScript object to our console.
