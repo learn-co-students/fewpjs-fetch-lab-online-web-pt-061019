@@ -1,5 +1,9 @@
 function fetchBooks() {
-
+  const gotUrl = "https://anapioficeandfire.com/api/books"
+  // Variable that will store the api URL
+  return fetch(gotUrl)
+  .then(response => response.json())
+  .then(json => renderBooks(json))
 }
 
 function renderBooks(json) {
